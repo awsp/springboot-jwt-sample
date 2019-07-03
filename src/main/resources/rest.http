@@ -29,3 +29,24 @@ Authorization: Bearer __TOKEN__
 ### Obtain all vehicles
 
 GET http://localhost:8081/vehicles HTTP/1.1
+
+### Getting vehicle that does not exists
+
+GET http://localhost:8081/vehicles/100000 HTTP/1.1
+
+### Updating part of the vehicle's data
+
+PATCH http://localhost:8081/vehicles/1 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer __TOKEN__
+
+{
+  "name": "Vehicle #1"
+}
+
+### Getting myself
+
+GET http://localhost:8081/me
+Content-Type: application/json
+Authorization: Bearer __TOKEN__
+###
