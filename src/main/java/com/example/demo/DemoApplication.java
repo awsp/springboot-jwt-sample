@@ -1,8 +1,10 @@
 package com.example.demo;
 
 import com.example.demo.domain.User;
+import com.example.demo.security.jwt.JwtProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
@@ -15,6 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;
 
+@EnableConfigurationProperties({JwtProperties.class})
 @SpringBootApplication
 public class DemoApplication {
 
