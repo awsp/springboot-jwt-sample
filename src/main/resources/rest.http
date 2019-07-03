@@ -1,0 +1,31 @@
+### Basic Check
+GET http://localhost:8081
+
+### Sign in
+
+POST http://localhost:8081/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+### Get Users
+
+GET http://localhost:8081/users HTTP/1.1
+Authorization: Bearer __TOKEN__
+
+### Create new vehicle using API
+
+POST http://localhost:8081/vehicles HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer __TOKEN__
+
+{
+  "name": "New vehicle"
+}
+
+### Obtain all vehicles
+
+GET http://localhost:8081/vehicles HTTP/1.1
